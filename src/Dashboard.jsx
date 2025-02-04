@@ -5,19 +5,19 @@ const Dashboard = () => {
   const { data: users, total: totalUsers } = useGetList('users');
   const { data: posts, total: totalPosts } = useGetList('posts');
 
-  // Préparer les données pour le graphique en barres (nombre de posts par utilisateur)
+  // Prepare data for bar chart (number of posts per user)
   const postsPerUser = users?.map(user => ({
     name: user.name,
     posts: posts?.filter(post => post.authorId === user.id).length,
   }));
 
-  // Préparer les données pour le graphique en camembert (répartition des posts publiés vs brouillons)
+  // Prepare data for pie chart (distribution of published vs draft posts)
   const postStatusDistribution = [
     { name: 'Published', value: posts?.filter(post => post.status === 'published').length },
     { name: 'Draft', value: posts?.filter(post => post.status === 'draft').length },
   ];
 
-  // Couleurs pour le graphique en camembert
+  // Colors for Pie Chart
   const COLORS = ['#0088FE', '#00C49F'];
 
   return (

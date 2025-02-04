@@ -2,6 +2,7 @@ import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } from 'react-admin';
 
 const authProvider = {
     login: ({ username, password }) => {
+        // Check if credentials match admin user (username: admin, password: password)
         if (username === 'admin' && password === 'password') {
             localStorage.setItem('username', username);
             return Promise.resolve();
