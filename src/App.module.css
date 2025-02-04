@@ -1,0 +1,162 @@
+.loginWrapper {
+  width: 100vw;
+  min-height: 100vh;
+}
+.loginComponent {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.loginComponent > div {
+  width: 100%;
+  max-width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-items: center;
+  transform: translateY(30%);
+  background-color: #101218;
+  border: .150rem solid #444854;
+  border-radius: 0rem;
+}
+
+.loginComponent > div > form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+.loginWrapper > div > div.RaLogin-avatar {
+  display: none;
+}
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ width: 100% !important;
+  min-width: 100%;
+}
+
+/* Layout principal */
+.layout.css-1n2f7rh-RaLayout-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* AppFrame */
+.RaLayout-appFrame {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content principal */
+.RaLayout-contentWithSidebar {
+  display: flex;
+  flex: 1;
+}
+
+#main-content.RaLayout-content {
+  flex: 1;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* Liste et tableau */
+.list-page.css-1ycqwd-RaList-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.RaList-main {
+  flex: 1;
+  overflow: auto;
+}
+
+/* Barre d'outils et actions */
+.RaList-actions.css-7k4ndg-RaListToolbar-root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Conteneur du tableau */
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded {
+  margin: 1rem 0;
+  overflow: hidden;
+
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+}
+
+/* DataGrid et tableau */
+.RaDatagrid-root.css-14mmu8f-RaDatagrid-root {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 600px) {
+  .RaLayout-contentWithSidebar {
+    flex-direction: column;
+  }
+  
+  #main-content.RaLayout-content {
+    padding: 0.5rem;
+  }
+  
+  .RaList-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .css-1l66mhm-RaBulkActionsToolbar-root {
+    width: 100%;
+  }
+}
+
+@media (max-width: 960px) {
+  .RaDatagrid-table {
+    min-width: 800px; /* Force scroll horizontal sur petit écran */
+  }
+}
+
+/* Styles pour le drawer latéral */
+.MuiDrawer-root.MuiDrawer-docked {
+  position: relative;
+  width: 240px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .MuiDrawer-root.MuiDrawer-docked {
+    position: absolute;
+    z-index: 1200;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .MuiDrawer-root.MuiDrawer-docked.Mui-open {
+    transform: translateX(0);
+  }
+}
+
+/* Styles d'élévation et ombres */
+.MuiPaper-elevation.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),
+              0px 4px 5px 0px rgba(0,0,0,0.14);
+}
+
+/* Styles de la barre d'application */
+.MuiAppBar-root.RaAppBar-root {
+  z-index: 1100;
+  position: relative;
+}
